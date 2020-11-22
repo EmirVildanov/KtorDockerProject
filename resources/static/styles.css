@@ -1,0 +1,25 @@
+body {
+    background: #B9D8FF;
+}
+
+.homeContainer {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.homeHeader {
+    font-size: 3rem;
+}
+
+.homeImage {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}
+
+.homeRedirectButton {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
