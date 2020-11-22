@@ -1,14 +1,18 @@
 package com.example
 
 import freemarker.cache.ClassTemplateLoader
-import io.ktor.application.*
-import io.ktor.features.*
-import io.ktor.freemarker.*
-import io.ktor.gson.*
-import io.ktor.http.content.*
-import io.ktor.response.*
-import io.ktor.request.*
-import io.ktor.routing.*
+import io.ktor.application.Application
+import io.ktor.application.install
+import io.ktor.application.call
+import io.ktor.features.PartialContent
+import io.ktor.features.ContentNegotiation
+import io.ktor.freemarker.FreeMarker
+import io.ktor.gson.gson
+import io.ktor.http.content.static
+import io.ktor.http.content.resources
+import io.ktor.response.respondText
+import io.ktor.routing.routing
+import io.ktor.routing.route
 import io.ktor.routing.get
 import java.text.DateFormat
 
