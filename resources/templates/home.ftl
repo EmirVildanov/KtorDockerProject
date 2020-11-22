@@ -5,7 +5,7 @@
 <body>
 <div class="homeContainer">
     <span class="homeHeader">This is a message for those who ever had a problem of broken Ubuntu run</span>
-    <span class="homeHeader">Click the button bellow to see secret information about what to do it situations like these</span>
+    <span class="homeHeader">Click the button bellow to see secret information about what to do when you broke your ubuntu</span>
 </div>
 <img
         src="../static/ubuntu.png"
@@ -17,7 +17,7 @@
       enctype="application/x-www-form-urlencoded"
       class="homeRedirectForm"
 >
-    <input class="homeRedirectButton" type="submit" value="Go to main">
+    <input class="homeRedirectButton" type="submit" value="Go to info">
 </form>
 </body>
 </html>

@@ -48,7 +48,7 @@ fun Application.module(testing: Boolean = false) {
                 call.respond(FreeMarkerContent("home.ftl", null))
             }
             post {
-                call.respondRedirect("/info", permanent = false)
+                call.respondRedirect("/login", permanent = false)
             }
         }
 
@@ -63,7 +63,7 @@ fun Application.module(testing: Boolean = false) {
                 if (post["password"] == secretPassword ) {
                     call.respondRedirect("/info", permanent = false)
                 } else {
-                    call.respond(FreeMarkerContent("login.ftl", mapOf("error" to "wrongPasswordAnswer")))
+                    call.respond(FreeMarkerContent("login.ftl", mapOf("error" to wrongPasswordAnswer)))
                 }
             }
         }
