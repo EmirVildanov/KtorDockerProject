@@ -52,26 +52,24 @@ fun Application.module(testing: Boolean = false) {
             }
         }
 
-        get("/info") {
-            call.respond(FreeMarkerContent("info.ftl", null))
-        }
-
-        get("/home") {
-            call.respond(FreeMarkerContent("index.ftl", mapOf("data" to IndexData(listOf(1, 2, 3))), ""))
-        }
-
         route("/login") {
             get {
                 call.respond(FreeMarkerContent("login.ftl", null))
             }
             post {
                 val post = call.receiveParameters()
-                if (post["username"] != null && post["username"] == post["password"]) {
-                    call.respondRedirect("/", permanent = false)
+                val secretPassword = "I am miserable person who broke the Ubuntu"
+                val wrongPasswordAnswer = "I am miserable person who broke the Ubuntu"
+                if (post["password"] == secretPassword ) {
+                    call.respondRedirect("/info", permanent = false)
                 } else {
-                    call.respond(FreeMarkerContent("login.ftl", mapOf("error" to "Invalid login")))
+                    call.respond(FreeMarkerContent("login.ftl", mapOf("error" to "wrongPasswordAnswer")))
                 }
             }
+        }
+
+        get("/info") {
+            call.respond(FreeMarkerContent("info.ftl", null))
         }
     }
 }
